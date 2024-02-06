@@ -135,7 +135,7 @@ const About = () => {
   const skills = [
     'Data Science',
     'Python',
-    'C',
+    'C++',
     'Go Lang',
     'SQL',
     'Deep Learning',
