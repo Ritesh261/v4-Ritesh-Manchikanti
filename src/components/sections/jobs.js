@@ -163,7 +163,23 @@ const StyledTabPanel = styled.div`
     font-size: var(--fz-xs);
   }
 `;
+const StyledSkills = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: start;
+  margin-top: 20px;
+`;
 
+const SkillTile = styled.span`
+  background-color: #112142; // Example skill color, replace with your desired color
+  color: var(--green); // Text color for the skill
+  border-radius: 100px;
+  padding: 10px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+`;
 const Jobs = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -179,6 +195,7 @@ const Jobs = () => {
               location
               range
               url
+              skills
             }
             html
           }
@@ -273,7 +290,7 @@ const Jobs = () => {
           {jobsData &&
             jobsData.map(({ node }, i) => {
               const { frontmatter, html } = node;
-              const { title, url, company, range } = frontmatter;
+              const { title, url, company, range, skills } = frontmatter;
 
               return (
                 <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="fade">
@@ -295,8 +312,11 @@ const Jobs = () => {
                     </h3>
 
                     <p className="range">{range}</p>
-
                     <div dangerouslySetInnerHTML={{ __html: html }} />
+                    <StyledSkills>
+                      {skills &&
+                        skills.map((skill, index) => <SkillTile key={index}>{skill}</SkillTile>)}
+                    </StyledSkills>
                   </StyledTabPanel>
                 </CSSTransition>
               );

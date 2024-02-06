@@ -192,9 +192,13 @@ const StyledProject = styled.li`
 
     li {
       margin: 0 20px 5px 0;
-      color: var(--light-slate);
+      color: var(--green);
+      background-color: #112142;
+      border-radius: 100px;
+      padding: 10px 10px;
+      font-size: 12px;
+      font-weight: 500;
       font-family: var(--font-mono);
-      font-size: var(--fz-xs);
       white-space: nowrap;
     }
 
@@ -256,7 +260,7 @@ const StyledProject = styled.li`
     a {
       width: 100%;
       height: 100%;
-      background-color: var(--green);
+      background-color: transparent;
       border-radius: var(--border-radius);
       vertical-align: middle;
 
@@ -291,7 +295,7 @@ const StyledProject = styled.li`
     .img {
       border-radius: var(--border-radius);
       mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1) brightness(90%);
+      // filter: grayscale(100%) contrast(1) brightness(90%);
 
       @media (max-width: 768px) {
         object-fit: cover;
@@ -302,7 +306,6 @@ const StyledProject = styled.li`
     }
   }
 `;
-
 const Featured = () => {
   const data = useStaticQuery(graphql`
     {
@@ -372,7 +375,6 @@ const Featured = () => {
                       className="project-description"
                       dangerouslySetInnerHTML={{ __html: html }}
                     />
-
                     {tech.length && (
                       <ul className="project-tech-list">
                         {tech.map((tech, i) => (
@@ -380,7 +382,6 @@ const Featured = () => {
                         ))}
                       </ul>
                     )}
-
                     <div className="project-links">
                       {cta && (
                         <a href={cta} aria-label="Course Link" className="cta">
@@ -393,7 +394,11 @@ const Featured = () => {
                         </a>
                       )}
                       {external && !cta && (
-                        <a href={external} aria-label="External Link" className="external">
+                        <a
+                          href={external}
+                          aria-label="External Link"
+                          className="external"
+                          target="_blank" rel="noreferrer">
                           <Icon name="External" />
                         </a>
                       )}

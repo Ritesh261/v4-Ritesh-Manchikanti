@@ -19,6 +19,10 @@ const StyledAboutSection = styled.section`
   }
 `;
 const StyledText = styled.div`
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
   ul.skills-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
@@ -27,6 +31,7 @@ const StyledText = styled.div`
     margin: 20px 0 0 0;
     overflow: hidden;
     list-style: none;
+    justify-items: center;
 
     li {
       position: relative;
@@ -34,10 +39,11 @@ const StyledText = styled.div`
       padding-left: 20px;
       font-family: var(--font-mono);
       font-size: var(--fz-xs);
+      text-align: center;
 
       &:before {
         content: '▹';
-        position: absolute;
+        position: relative;
         left: 0;
         color: var(--green);
         font-size: var(--fz-sm);
@@ -60,8 +66,9 @@ const StyledPic = styled.div`
     display: block;
     position: relative;
     width: 100%;
+    outline: 0;
     border-radius: var(--border-radius);
-    background-color: var(--green);
+    background-color: var(--white);
 
     &:hover,
     &:focus {
@@ -74,7 +81,7 @@ const StyledPic = styled.div`
 
       .img {
         filter: none;
-        mix-blend-mode: normal;
+        // mix-blend-mode: normal;
       }
     }
 
@@ -82,7 +89,7 @@ const StyledPic = styled.div`
       position: relative;
       border-radius: var(--border-radius);
       mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
+      // filter: grayscale(100%) contrast(1);
       transition: var(--transition);
     }
 
@@ -125,7 +132,16 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
+  const skills = [
+    'Data Science',
+    'Python',
+    'C',
+    'Go Lang',
+    'SQL',
+    'Deep Learning',
+    'Natural Language Processing(NLP)',
+    'TypeScript',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,30 +151,23 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Hello! My name is Ritesh and I enjoy Training models and automating tasks leveraging
+              new technologies. My interest in Machine Learning started back in 2019 when I decided
+              to take a signal processing course in my undergrad.
             </p>
 
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
+              Fast-forward today i've had a chance to finish my masters in computer science at State
+              university of New York at buffalo with specilization in Machine Learning. Taking
+              diverse courses from analysis of Algorithms to Blockchain Development.{' '}
             </p>
 
             <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
-              </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
+              I've recently commenced my role as a Data Scientist at Devfi Inc, where I engage with
+              diverse tools and technologies, focusing on Deep Learning and Data Science. With a
+              comprehensive understanding, I handle tasks related to training and deploying models
+              for Object Detection, Object Classification, Semantic Segmentation, and the Deployment
+              of Large Language Models.
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>
@@ -173,7 +182,7 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/me.jpg"
+              src="../../images/my_jpg.jpeg"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
