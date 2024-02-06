@@ -325,7 +325,6 @@ const Featured = () => {
               tech
               github
               external
-              cta
             }
             html
           }
@@ -398,7 +397,8 @@ const Featured = () => {
                           href={external}
                           aria-label="External Link"
                           className="external"
-                          target="_blank" rel="noreferrer">
+                          target="_blank"
+                          rel="noreferrer">
                           <Icon name="External" />
                         </a>
                       )}
