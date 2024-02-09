@@ -130,6 +130,17 @@ const About = () => {
     }
 
     sr.reveal(revealContainer.current, srConfig());
+    const script = document.createElement('script');
+    script.src = 'https://cdn.voiceflow.com/widget/bundle.mjs';
+    script.type = 'text/javascript';
+    script.onload = function() {
+      window.voiceflow.chat.load({
+        verify: { projectID: '65c5ee5bbfe9831529334876' },
+        url: 'https://general-runtime.voiceflow.com',
+        versionID: 'production',
+      });
+    };
+    document.body.appendChild(script);
   }, []);
 
   const skills = [
