@@ -1,0 +1,14 @@
+.cls-1 {
+  fill: #64ffda;
+  font-family: 'Corbel', 'Corbel';
+  font-size: 125px;
+}
+
+.cls-2 {
+  fill: #0a192f;
+  stroke: #64ffda;
+  stroke-miterlimit: 10;
+  stroke-width: 10px;
+  stroke-linecap: 'round';
+  stroke-linejoin: 'round';
+}

@@ -7,7 +7,7 @@ module.exports = {
       'Ritesh Manchikanti is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
     siteUrl: 'https://ritesh-manchikanti.netlify.app/', // No trailing slash allowed!
     image:
-      '/Users/riteshmanchikanti/Work/resume/Ritesh_Portfolio/v4-Ritesh-Manchikanti/v4-Ritesh-Manchikanti/src/images/my_jpg.jpeg', // Path to your image you placed in the 'static' folder
+      '/Users/riteshmanchikanti/Work/resume/Ritesh_Portfolio/v4-Ritesh-Manchikanti/v4-Ritesh-Manchikanti/src/images/og.png', // Path to your image you placed in the 'static' folder
     // twitterUsername: '@bchiang7',
   },
   plugins: [
@@ -27,7 +27,7 @@ module.exports = {
         background_color: config.colors.darkNavy,
         theme_color: config.colors.navy,
         display: 'minimal-ui',
-        icon: 'src/images/logo.png',
+        icon: 'src/images/Ritesh_logo.png',
       },
     },
     `gatsby-plugin-offline`,

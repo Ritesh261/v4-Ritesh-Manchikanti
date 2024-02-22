@@ -4,9 +4,9 @@ title: 'Catalyst OPS'
 github: ''
 external: 'https://drive.google.com/file/d/14hDzoz9V2ZdID4ziW46IO1CVKgua3Buf/view?usp=sharing'
 tech:
-  - Open CV
-  - Cloud
-  - Rasperri Pi
+  - RASA
+  - NLU
+  - Node JS
 company: 'Upstatement'
 showInProjects: true
 ---
