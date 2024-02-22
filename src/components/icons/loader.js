@@ -13,12 +13,6 @@ const IconLoader = () => (
     <text className="cls-1" transform="translate(44.27 133.58)">
       R
     </text>
-    {/* d="M 50, 5
-                  L 11, 27
-                  L 11, 72
-                  L 50, 95
-                  L 89, 73
-                  L 89, 28 z" */}
   </svg>
 );
 
